@@ -12,7 +12,7 @@ function setProgress(seconds) {
   const percent = seconds / TOTAL_SECONDS;
   const offset = circumference * (1 - percent);
   circle.style.strokeDashoffset = offset;
-  console.log(`Setting progress: ${seconds} seconds left, offset: ${offset}`);
+//   console.log(`Setting progress: ${seconds} seconds left, offset: ${offset}`);
 }
 
 function formatTime(sec) {
