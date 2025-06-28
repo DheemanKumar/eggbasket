@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Responsive Tailwind Boxes</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    /* Optional: Smooth transition for SVG progress */
+    .progress-ring__circle {
+      transition: stroke-dashoffset 0.5s linear;
+    }
+  </style>
+</head>
+<body class="min-h-screen m-0 p-0 bg-cover bg-center" style="background-image: url('images/barn.png');">
+  <main class="min-h-screen relative bg-transparent">
+
+
+
+    <!-- Timer Box Top-Left -->
+    <div id="point-bord" class="absolute top-4 left-4 bg-white border rounded-lg px-6 py-3 shadow text-2xl font-mono">
+      0
+    </div>
+    <!-- Radial Timer Top-Right -->
+    <div class="absolute top-4 right-4 w-24 h-24 flex items-center justify-center">
+      <svg id="progress-ring" class="w-24 h-24 rotate-[-90deg]" width="96" height="96">
+        <circle
+          class="progress-ring__circle"
+          stroke="#3b82f6"
+          stroke-width="8"
+          fill="transparent"
+          r="40"
+          cx="48"
+          cy="48"
+        />
+      </svg>
+      <span id="radial-timer-text" class="absolute text-xl font-mono text-blue-700">30</span>
+    </div>
+    <!-- Six Boxes Top Center -->
+    <!-- Chickens on top of a shared bar -->
+<div class="flex flex-col items-center w-full pt-20 relative z-10">
+  <!-- Chicken Row -->
+  <div class="flex flex-row justify-evenly items-start w-full 
+              max-sm:flex-col max-sm:items-center max-sm:space-y-4 max-sm:space-x-0">
+    <div class="w-24 h-24 z-20 flex items-center justify-center">
+      <img src="images/chicken.png" alt="chicken" class="w-20 h-20 z-20 object-contain" />
+    </div>
+    <div class="w-24 h-24 z-20 flex items-center justify-center">
+      <img src="images/chicken.png" alt="chicken" class="w-20 h-20 z-20 object-contain" />
+    </div>
+    <div class="w-24 h-24 z-20 flex items-center justify-center">
+      <img src="images/chicken.png" alt="chicken" class="w-20 h-20 z-20 object-contain" />
+    </div>
+    <div class="w-24 h-24 z-20 flex items-center justify-center">
+      <img src="images/chicken.png" alt="chicken" class="w-20 h-20 z-20 object-contain" />
+    </div>
+    <div class="w-24 h-24 z-20 flex items-center justify-center">
+      <img src="images/chicken.png" alt="chicken" class="w-20 h-20 z-20 object-contain" />
+    </div>
+    <div class="w-24 h-24 z-20 flex items-center justify-center">
+      <img src="images/chicken.png" alt="chicken" class="w-20 h-20 z-20 object-contain" />
+    </div>
+    <div class="w-24 h-24 z-20 flex items-center justify-center">
+      <img src="images/chicken.png" alt="chicken" class="w-20 h-20 z-20 object-contain" />
+    </div>
+  </div>
+
+  <!-- Bar Image Below Chickens -->
+  <div class="w-full flex justify-center mt-[-12px]">
+  <img src="images/bar.png" alt="bar" 
+       class="w-[95%] h-[30px] max-w-[1200px] object-fill z-0" />
+</div>
+
+
+</div>
+
+    <!-- Basket Container and Basket -->
+    <div id="basket-container"
+     class="fixed left-1/2 bottom-20 -translate-x-1/2
+            w-[1250px] h-[200px] max-w-full max-h-[60vh] 
+            overflow-hidden">
+      <div id="basket" class="absolute w-20 h-20 rounded-lg shadow flex items-center justify-center bg-transparent" style="left:0;top:0;">
+        <img src="images/basket.png" alt="basket" class="w-full h-full object-contain " />
+      </div>
+    </div>
+
+
+  </main>
+  <script src="js/timer.js" defer></script>
+  <script src="js/basketmove.js" defer></script>
+  <script src="js/spawnEgg.js" defer></script>
+</body>
+</html>
